@@ -1,0 +1,1516 @@
+/* ===================================
+      KENDER SMP Official Website
+          STYLE.CSS
+=================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Vazirmatn",sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#09090b;
+
+color:#ffffff;
+
+overflow-x:hidden;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0b0b0b;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#8b5cf6;
+
+border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#a855f7;
+
+}
+
+/* Background */
+
+.background{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+z-index:-5;
+
+background:
+
+radial-gradient(circle at top,#8b5cf630,transparent 60%),
+
+radial-gradient(circle at bottom,#6d28d930,transparent 60%),
+
+#09090b;
+
+}
+
+/* Floating Particles */
+
+.particles{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+z-index:-4;
+
+overflow:hidden;
+
+}
+
+.particles::before,
+
+.particles::after{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+
+height:500px;
+
+background:radial-gradient(#a855f7 1px,transparent 1px);
+
+background-size:30px 30px;
+
+opacity:.15;
+
+animation:particleMove 45s linear infinite;
+
+}
+
+.particles::after{
+
+animation-duration:70s;
+
+transform:rotate(180deg);
+
+}
+
+@keyframes particleMove{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(-1000px);
+
+}
+
+}
+
+/* Navbar */
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 8%;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:999;
+
+transition:.35s;
+
+}
+
+.logo{
+
+font-size:34px;
+
+font-weight:900;
+
+letter-spacing:2px;
+
+color:#c084fc;
+
+text-shadow:
+
+0 0 10px #8b5cf6,
+
+0 0 25px #8b5cf6;
+
+animation:logoFloat 4s ease infinite;
+
+}
+
+@keyframes logoFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+}
+
+nav ul{
+
+display:flex;
+
+align-items:center;
+
+gap:26px;
+
+list-style:none;
+
+}
+
+nav ul li a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:17px;
+
+transition:.3s;
+
+position:relative;
+
+}
+
+nav ul li a:hover{
+
+color:#c084fc;
+
+}
+
+nav ul li a::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-6px;
+
+left:0;
+
+width:0;
+
+height:2px;
+
+background:#a855f7;
+
+transition:.35s;
+
+}
+
+nav ul li a:hover::after{
+
+width:100%;
+
+}/* ================= Hero ================= */
+
+header{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:0 20px;
+
+}
+
+.hero{
+
+max-width:900px;
+
+animation:fadeUp 1s ease;
+
+}
+
+.hero h1{
+
+font-size:90px;
+
+font-weight:900;
+
+color:#c084fc;
+
+text-shadow:
+
+0 0 20px #8b5cf6,
+
+0 0 40px #8b5cf6,
+
+0 0 80px #8b5cf6;
+
+margin-bottom:20px;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+font-weight:700;
+
+margin-bottom:25px;
+
+color:#ffffff;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+line-height:2;
+
+color:#d4d4d8;
+
+margin-bottom:45px;
+
+}
+
+.heroButtons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+/* ================= Buttons ================= */
+
+button{
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(135deg,#7c3aed,#a855f7);
+
+color:#fff;
+
+font-size:17px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:
+
+0 0 15px rgba(168,85,247,.5);
+
+}
+
+button:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 0 25px #8b5cf6,
+
+0 0 45px #8b5cf6;
+
+}
+
+button:disabled{
+
+background:#3f3f46;
+
+cursor:not-allowed;
+
+box-shadow:none;
+
+opacity:.75;
+
+}
+
+/* ================= Sections ================= */
+
+section{
+
+padding:100px 8%;
+
+}
+
+section h2{
+
+text-align:center;
+
+font-size:48px;
+
+margin-bottom:60px;
+
+color:#c084fc;
+
+text-shadow:
+
+0 0 15px #8b5cf6;
+
+}
+
+/* ================= Cards ================= */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:20px;
+
+padding:30px;
+
+transition:.4s;
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+border-color:#a855f7;
+
+box-shadow:
+
+0 0 20px #8b5cf6,
+
+0 0 40px rgba(168,85,247,.35);
+
+}
+
+.card h3{
+
+font-size:28px;
+
+margin-bottom:18px;
+
+color:#ffffff;
+
+}
+
+.card h4{
+
+font-size:22px;
+
+margin:12px 0;
+
+color:#c084fc;
+
+}
+
+.card p{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#d4d4d8;
+
+}
+
+/* ================= Fade Animation ================= */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+section{
+
+animation:fadeUp .8s ease;
+
+}/* ================= Rules ================= */
+
+.rules{
+
+max-width:1000px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.rules p{
+
+padding:22px;
+
+border-radius:16px;
+
+background:rgba(255,255,255,.05);
+
+border-left:5px solid #8b5cf6;
+
+backdrop-filter:blur(15px);
+
+font-size:18px;
+
+transition:.35s;
+
+}
+
+.rules p:hover{
+
+transform:translateX(-10px);
+
+background:rgba(139,92,246,.15);
+
+}
+
+/* ================= Announcement ================= */
+
+.announcementBox{
+
+max-width:1000px;
+
+margin:auto;
+
+padding:35px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:20px;
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.announcementBox h3{
+
+margin-bottom:25px;
+
+font-size:28px;
+
+color:#c084fc;
+
+}
+
+#announcementList p{
+
+padding:18px;
+
+margin-bottom:15px;
+
+background:rgba(255,255,255,.04);
+
+border-radius:12px;
+
+transition:.3s;
+
+}
+
+#announcementList p:hover{
+
+background:rgba(168,85,247,.15);
+
+}
+
+/* ================= Reviews ================= */
+
+#reviews .card{
+
+text-align:center;
+
+}
+
+#reviews h4{
+
+font-size:22px;
+
+margin:15px 0;
+
+color:#c084fc;
+
+}
+
+#reviews h3{
+
+font-size:30px;
+
+}
+
+/* ================= Staff ================= */
+
+#staff .card{
+
+text-align:center;
+
+}
+
+#staff h2{
+
+margin-top:15px;
+
+font-size:30px;
+
+color:#ffffff;
+
+}
+
+#staff p{
+
+margin-top:15px;
+
+}
+
+/* ================= Rank Cards ================= */
+
+#ranks .card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+#ranks .card::before{
+
+content:"";
+
+position:absolute;
+
+top:-100%;
+
+left:-100%;
+
+width:250%;
+
+height:250%;
+
+background:linear-gradient(
+
+45deg,
+
+transparent,
+
+rgba(255,255,255,.08),
+
+transparent
+
+);
+
+transform:rotate(25deg);
+
+transition:.8s;
+
+}
+
+#ranks .card:hover::before{
+
+top:100%;
+
+left:100%;
+
+}
+
+#ranks button{
+
+margin-top:20px;
+
+width:100%;
+
+}
+
+/* ================= Contact ================= */
+
+#contact .card{
+
+text-align:center;
+
+}
+
+#contact p{
+
+word-break:break-word;
+
+font-size:18px;
+
+margin:18px 0;
+
+}
+
+/* ================= Footer ================= */
+
+footer{
+
+margin-top:80px;
+
+padding:50px 20px;
+
+text-align:center;
+
+background:#050505;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.footerLogo{
+
+font-size:34px;
+
+font-weight:900;
+
+color:#c084fc;
+
+margin-bottom:20px;
+
+text-shadow:
+
+0 0 20px #8b5cf6;
+
+}
+
+footer p{
+
+margin:10px 0;
+
+color:#b4b4b8;
+
+font-size:16px;
+
+}/* ================= Hover Effects ================= */
+
+.card{
+
+cursor:pointer;
+
+}
+
+.card:hover h3{
+
+color:#c084fc;
+
+transition:.3s;
+
+}
+
+.card:hover p{
+
+color:#ffffff;
+
+transition:.3s;
+
+}
+
+/* ================= Image Glow ================= */
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+.glow{
+
+box-shadow:
+
+0 0 20px #8b5cf6,
+
+0 0 40px #8b5cf6;
+
+border-radius:18px;
+
+}
+
+/* ================= Neon Line ================= */
+
+.line{
+
+width:120px;
+
+height:4px;
+
+margin:15px auto 50px;
+
+border-radius:50px;
+
+background:linear-gradient(
+
+90deg,
+
+#8b5cf6,
+
+#c084fc,
+
+#8b5cf6
+
+);
+
+box-shadow:
+
+0 0 20px #8b5cf6;
+
+}
+
+/* ================= Floating Animation ================= */
+
+.float{
+
+animation:floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ================= Pulse ================= */
+
+.pulse{
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 rgba(168,85,247,.5);
+
+}
+
+50%{
+
+box-shadow:
+
+0 0 25px rgba(168,85,247,.8);
+
+}
+
+100%{
+
+box-shadow:0 0 0 rgba(168,85,247,.5);
+
+}
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:992px){
+
+nav{
+
+flex-direction:column;
+
+padding:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+.hero h1{
+
+font-size:70px;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+}
+
+section{
+
+padding:80px 6%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero h2{
+
+font-size:24px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.heroButtons{
+
+flex-direction:column;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+section h2{
+
+font-size:36px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.logo{
+
+font-size:26px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero h2{
+
+font-size:20px;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+}
+
+nav ul li a{
+
+font-size:15px;
+
+}
+
+.card{
+
+padding:22px;
+
+}
+
+footer{
+
+padding:35px 15px;
+
+}
+
+}/* ================= Language Button ================= */
+
+#languageButton{
+
+padding:10px 18px;
+
+border-radius:12px;
+
+font-size:15px;
+
+font-weight:700;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.1);
+
+transition:.35s;
+
+}
+
+#languageButton:hover{
+
+background:#8b5cf6;
+
+}
+
+/* ================= Copy IP ================= */
+
+#ip{
+
+font-size:22px;
+
+font-weight:700;
+
+color:#c084fc;
+
+text-shadow:
+
+0 0 10px #8b5cf6;
+
+word-break:break-word;
+
+}
+
+/* ================= Rank Hover ================= */
+
+#ranks .card:hover{
+
+transform:
+
+translateY(-12px)
+
+scale(1.05);
+
+}
+
+/* ================= Button Shine ================= */
+
+button{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+button::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:100%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.35),
+
+transparent
+
+);
+
+transition:.7s;
+
+}
+
+button:hover::before{
+
+left:120%;
+
+}
+
+/* ================= Smooth Reveal ================= */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ================= Glass Effect ================= */
+
+.glass{
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ================= Neon Shadow ================= */
+
+.neon{
+
+box-shadow:
+
+0 0 20px #8b5cf6,
+
+0 0 40px #8b5cf6,
+
+0 0 80px rgba(139,92,246,.5);
+
+}
+
+/* ================= Selection ================= */
+
+::selection{
+
+background:#8b5cf6;
+
+color:#fff;
+
+}
+
+/* ================= Links ================= */
+
+a{
+
+color:inherit;
+
+text-decoration:none;
+
+}
+
+/* ================= Inputs ================= */
+
+input,
+
+textarea{
+
+width:100%;
+
+padding:15px;
+
+margin-top:15px;
+
+border:none;
+
+outline:none;
+
+border-radius:14px;
+
+background:#18181b;
+
+color:#fff;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.3s;
+
+}
+
+input:focus,
+
+textarea:focus{
+
+border-color:#8b5cf6;
+
+box-shadow:
+
+0 0 20px rgba(139,92,246,.4);
+
+}
+
+/* ================= Loading ================= */
+
+.loader{
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+border:5px solid rgba(255,255,255,.1);
+
+border-top:5px solid #8b5cf6;
+
+animation:spin 1s linear infinite;
+
+margin:auto;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}/* ==========================================
+            FINAL EFFECTS
+========================================== */
+
+/* Smooth Scrolling */
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+/* Fade In */
+
+.fadeIn{
+
+animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* Scale Animation */
+
+.scale{
+
+animation:scale .5s ease;
+
+}
+
+@keyframes scale{
+
+from{
+
+transform:scale(.9);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+/* Floating Background Glow */
+
+.background::before{
+
+content:"";
+
+position:absolute;
+
+width:600px;
+
+height:600px;
+
+top:-250px;
+
+right:-200px;
+
+background:#8b5cf6;
+
+filter:blur(220px);
+
+opacity:.18;
+
+border-radius:50%;
+
+animation:moveGlow1 10s ease-in-out infinite;
+
+}
+
+.background::after{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+
+height:500px;
+
+bottom:-220px;
+
+left:-180px;
+
+background:#6d28d9;
+
+filter:blur(220px);
+
+opacity:.15;
+
+border-radius:50%;
+
+animation:moveGlow2 12s ease-in-out infinite;
+
+}
+
+@keyframes moveGlow1{
+
+0%,100%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(-40px,30px);
+
+}
+
+}
+
+@keyframes moveGlow2{
+
+0%,100%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(40px,-30px);
+
+}
+
+}
+
+/* Footer Links */
+
+footer a{
+
+color:#c084fc;
+
+transition:.3s;
+
+}
+
+footer a:hover{
+
+color:#ffffff;
+
+}
+
+/* Disable Button */
+
+button:disabled{
+
+opacity:.7;
+
+filter:grayscale(20%);
+
+}
+
+/* Better Transitions */
+
+*{
+
+transition:
+
+background .3s,
+
+color .3s,
+
+border-color .3s,
+
+box-shadow .3s,
+
+transform .3s;
+
+}
+
+/* Prevent Image Drag */
+
+img{
+
+user-select:none;
+
+-webkit-user-drag:none;
+
+}
+
+/* Better Text */
+
+p{
+
+line-height:1.9;
+
+}
+
+/* End */
+
+body::after{
+
+content:"";
+
+display:block;
+
+height:40px;
+
+}
